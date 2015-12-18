@@ -1,0 +1,19 @@
+require 'spec_helper'
+
+describe 'datadog_agent::integrations::nginx' do
+  let(:facts) {{
+    operatingsystem: 'Ubuntu'
+  }}
+
+  let(:conf_dir) { '/etc/dd-agent/conf.d' }
+  let(:dd_user) { 'dd-agent' }
+  let(:dd_group) { 'root' }
+  let(:dd_package) { 'datadog-agent' }
+  let(:dd_service) { 'datadog-agent' }
+  let(:conf_file) { "#{conf_dir}/network.yaml" }
+
+  context 'with default parameters' do
+    it { should compile.with_all_deps }
+    it { should contain_datadog_agent__integration('nginx') }
+  end
+end
