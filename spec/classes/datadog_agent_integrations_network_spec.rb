@@ -19,7 +19,6 @@ describe 'datadog_agent::integrations::network' do
       integration: 'network',
       params: {
         'excluded_interfaces' => [],
-        'excluded_interface_re' => :undef,
         'collect_connection_state' => false,
       }
     )}
