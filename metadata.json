@@ -74,7 +74,7 @@
     },
     {
       "name": "richardc/datacat",
-      "version_requirement": "=> 0.6.0"
+      "version_requirement": ">= 0.6.0"
     }
   ]
 }
